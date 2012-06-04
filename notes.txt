@@ -1,0 +1,11 @@
+Always assign 'name'-parameter to patterns in urls.py.
+
+Configure static file collection properly, have two/more separate folders
+as sources, and one folder to store them.
+
+Always use request.POST.get( field_name ); instead of direct subscription
+request.POST.get[ field_name ];
+
+To choose a random element from a QueryDict do not use 
+Entry.objects.order_by('?')[0], do not apply random.choice from the 
+standard library. Use index in Entry.objects.all()[random_index];
