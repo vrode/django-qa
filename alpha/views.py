@@ -11,6 +11,11 @@ from models import *;
 from controls import *;
 
 @csrf_protect
+def index( request ):
+    return redirect( "/add/" );
+
+
+@csrf_protect
 def list( request ):
     return render_to_response( "listing.html", {
             'questions': Question.objects.all()

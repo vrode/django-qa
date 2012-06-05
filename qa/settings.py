@@ -128,9 +128,7 @@ INSTALLED_APPS = (
     'south',
     'alpha',
     'inf1820',
-    'inf1010',
     'rus1101',
-    'rus1102',
 )
 
 # A sample logging configuration. The only tangible logging

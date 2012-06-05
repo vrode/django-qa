@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, include, url;
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -15,12 +15,10 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     
-    url(r'^$',          'alpha.views.home',     name="home" ),
-    url(r'^save/$',     'alpha.views.save',     name="save" ),
-    url(r'^random/$',   'alpha.views.random',   name="random" ),
-    url(r'^list/$',     'alpha.views.list',     name="list" ),
-    # url(r'^inf1080/$',  'inf1080.views.', name="random" ),
-    # url(r'^inf1010/$',  'inf1010.views.', name="random" ),
-    # url(r'^rus1101/$',  'rus1101.views.', name="random" ),
-    # url(r'^rus1102/$',  'rus1102.views.', name="random" ),
-)
+    url( r'',            include('alpha.urls') ),
+    url( r'^inf1820/',   include('inf1820.urls') ),
+    url( r'^rus1101/',   include('rus1101.urls') ),
+    # url(r'^inf1010/$',  include('inf1010.urls') ),
+    # url(r'^rus1102/$',  include('inf1102.urls') ),
+);
+
